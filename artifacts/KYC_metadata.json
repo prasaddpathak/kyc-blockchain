@@ -51,7 +51,7 @@
 				"type": "function"
 			},
 			{
-				"constant": false,
+				"constant": true,
 				"inputs": [
 					{
 						"name": "_bankAddress",
@@ -59,9 +59,14 @@
 					}
 				],
 				"name": "getBankComplaints",
-				"outputs": [],
+				"outputs": [
+					{
+						"name": "",
+						"type": "uint256"
+					}
+				],
 				"payable": false,
-				"stateMutability": "nonpayable",
+				"stateMutability": "view",
 				"type": "function"
 			},
 			{
@@ -93,7 +98,7 @@
 				"type": "function"
 			},
 			{
-				"constant": false,
+				"constant": true,
 				"inputs": [
 					{
 						"name": "_bankAddress",
@@ -101,20 +106,45 @@
 					}
 				],
 				"name": "viewBankDetails",
-				"outputs": [],
+				"outputs": [
+					{
+						"name": "",
+						"type": "string"
+					},
+					{
+						"name": "",
+						"type": "address"
+					},
+					{
+						"name": "",
+						"type": "string"
+					},
+					{
+						"name": "",
+						"type": "uint256"
+					},
+					{
+						"name": "",
+						"type": "uint256"
+					},
+					{
+						"name": "",
+						"type": "bool"
+					}
+				],
 				"payable": false,
-				"stateMutability": "nonpayable",
+				"stateMutability": "view",
 				"type": "function"
 			},
 			{
 				"constant": false,
 				"inputs": [
 					{
-						"name": "_bankName",
-						"type": "string"
+						"name": "_bankAddress",
+						"type": "address"
 					}
 				],
-				"name": "addBank",
+				"name": "removeBank",
 				"outputs": [],
 				"payable": false,
 				"stateMutability": "nonpayable",
@@ -144,20 +174,6 @@
 					{
 						"name": "_bankName",
 						"type": "string"
-					}
-				],
-				"name": "modifyIsAllowedToVote",
-				"outputs": [],
-				"payable": false,
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"constant": false,
-				"inputs": [
-					{
-						"name": "_bankName",
-						"type": "string"
 					},
 					{
 						"name": "_bankAddress",
@@ -176,9 +192,35 @@
 					{
 						"name": "_bankName",
 						"type": "string"
+					},
+					{
+						"name": "_bankAddress",
+						"type": "address"
+					},
+					{
+						"name": "_regNumber",
+						"type": "string"
 					}
 				],
-				"name": "removeBank",
+				"name": "addBank",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "_bankAddress",
+						"type": "address"
+					},
+					{
+						"name": "updatedValue",
+						"type": "bool"
+					}
+				],
+				"name": "modifyIsAllowedToVote",
 				"outputs": [],
 				"payable": false,
 				"stateMutability": "nonpayable",
@@ -244,10 +286,10 @@
 	},
 	"sources": {
 		"contracts\\kyc.sol": {
-			"keccak256": "0x1a6e7fb09eef7a4a2c1b9ace27687835f342b0476df064a99261e2a0822b670a",
+			"keccak256": "0x91773802bea0b73f58d7e55b06ef9a077e77346bfd1a6d087efabd599f841323",
 			"urls": [
-				"bzzr://0b112ada8d5ae02922ad192a1ad41bdc6fd26d620f12561eef42b90b3a539a27",
-				"dweb:/ipfs/QmdBYHF9uDoieKy51XAVLuDg7RTCQGYWMZzd2BHWaY6jMS"
+				"bzzr://5149162247a8734629e9b0392d7207993e294f4e1f08a1a38eb2183b0835d06b",
+				"dweb:/ipfs/QmdYRdwjWN65bMKp1KDJ1KvNfNvZj7rcGmvpegVqhGGFAo"
 			]
 		}
 	},

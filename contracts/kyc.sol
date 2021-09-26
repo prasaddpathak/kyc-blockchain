@@ -72,25 +72,36 @@ contract KYC{
         require(kycRequestList[_userName].bankAddress == address(0), "KYC Request for this customer is already present!");
         kycRequestList[_userName].userName = _userName;
         kycRequestList[_userName].customerData = _customerData;
-        kycRequestList[_userName].bankAddress = msg.sender; 
+        kycRequestList[_userName].bankAddress = msg.sender;
+        banks[msg.sender].kycCount +=1;
 
     }
 
     function removeRequest(string memory _userName) isBank() public{
         require(kycRequestList[_userName].bankAddress != address(0), "KYC Request for this customer is not present!");
         delete kycRequestList[_userName];
+        banks[kycRequestList[_userName].bankAddress].kycCount -=1;
     }
       
-    function upvoteCustomer(string memory _userName) isBank() hasAlreadyVoted() public{
-        //Check if already voted???
+    function upvoteCustomer(string memory _userName) isBank() hasAlreadyVoted(_userName) isAllowedToVote() public{
         customerVotes[msg.sender].push(customers[_userName].userName);
         customers[_userName].upVotes += 1;
+        changeKycStatus(_userName);
     }  
 
-    function downvoteCustomer(string memory _userName) isBank() public{
-        //Check if already voted???
+    function downvoteCustomer(string memory _userName) isBank() hasAlreadyVoted(_userName) isAllowedToVote() public{
         customers[_userName].downVotes += 1;
+        changeKycStatus(_userName);
     }  
+    
+    function changeKycStatus(string memory _userName) internal{
+        if (customers[_userName].upVotes > customers[_userName].downVotes) {
+            customers[_userName].kycStatus = true;
+        }
+        if (customers[_userName].downVotes > (bankCount/3)) {
+            customers[_userName].kycStatus = false;
+        }
+    }
 
     function getBankComplaints(address _bankAddress) isBank() public view returns (uint) {
         return banks[_bankAddress].complaintsRecoreded;
@@ -124,7 +135,6 @@ contract KYC{
         banks[_bankAddress].kycCount = 0;
         banks[_bankAddress].isAllowedToVote = true;
         bankCount += 1;
-        
     }
 
     function removeBank(address _bankAddress) isAdmin() public{
@@ -138,26 +148,28 @@ contract KYC{
         banks[_bankAddress].isAllowedToVote = updatedValue;
     }
 
-
-
-
     modifier isAdmin {
         require(msg.sender == admin, "Only Admins can trigger this function!");
         _;
     }
 
     modifier isBank {
-        //address sender_address = msg.sender;
         require(banks[msg.sender].ethAddress != address(0), "Only Banks can trigger this function!");
         _;
     }
 
-    modifier hasAlreadyVoted {
-        
+    modifier hasAlreadyVoted (string memory _userName) {
+        string[] memory voted = customerVotes[msg.sender];
+        for (uint i=0; i < voted.length; i++){
+            if (keccak256(bytes(voted[i])) == keccak256(bytes(_userName))){
+               revert("Your bank has already voted for this customer"); 
+            }
+        }
         _;
     }    
 
     modifier isAllowedToVote {
+        require(banks[msg.sender].isAllowedToVote == true, "Your bank is not allowed to vote!");
         _;
     }
 

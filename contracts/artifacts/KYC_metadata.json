@@ -316,10 +316,10 @@
 	},
 	"sources": {
 		"contracts/kyc.sol": {
-			"keccak256": "0xbf40347196fb369988346fd2622f5e6e6df4db3426c8702edeff84755774c4bd",
+			"keccak256": "0x91773802bea0b73f58d7e55b06ef9a077e77346bfd1a6d087efabd599f841323",
 			"urls": [
-				"bzz-raw://9c63a9e8a36f1db6bf8985209c8c649517ecd5483dc335ae4467530cf098e3c9",
-				"dweb:/ipfs/QmVmP64BfwuztDXAHuHYACsxCQiphNTkd32Bc79NvpXxYM"
+				"bzz-raw://138add19d5f2c4c0ec615ba7b62de7eddfb935467c676b93419b7d8391133789",
+				"dweb:/ipfs/QmdYRdwjWN65bMKp1KDJ1KvNfNvZj7rcGmvpegVqhGGFAo"
 			]
 		}
 	},
