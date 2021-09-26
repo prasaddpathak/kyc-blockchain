@@ -1,0 +1,255 @@
+{
+	"compiler": {
+		"version": "0.5.9+commit.e560f70d"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"constant": true,
+				"inputs": [
+					{
+						"name": "_userName",
+						"type": "string"
+					}
+				],
+				"name": "viewCustomer",
+				"outputs": [
+					{
+						"name": "",
+						"type": "string"
+					},
+					{
+						"name": "",
+						"type": "string"
+					},
+					{
+						"name": "",
+						"type": "address"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "_userName",
+						"type": "string"
+					},
+					{
+						"name": "_customerData",
+						"type": "string"
+					}
+				],
+				"name": "addCustomer",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "_bankAddress",
+						"type": "address"
+					}
+				],
+				"name": "getBankComplaints",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "_userName",
+						"type": "string"
+					}
+				],
+				"name": "removeRequest",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "_userName",
+						"type": "string"
+					}
+				],
+				"name": "downvoteCustomer",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "_bankAddress",
+						"type": "address"
+					}
+				],
+				"name": "viewBankDetails",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "_bankName",
+						"type": "string"
+					}
+				],
+				"name": "addBank",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "_userName",
+						"type": "string"
+					},
+					{
+						"name": "_customerData",
+						"type": "string"
+					}
+				],
+				"name": "addRequest",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "_bankName",
+						"type": "string"
+					}
+				],
+				"name": "modifyIsAllowedToVote",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "_bankName",
+						"type": "string"
+					},
+					{
+						"name": "_bankAddress",
+						"type": "address"
+					}
+				],
+				"name": "reportBank",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "_bankName",
+						"type": "string"
+					}
+				],
+				"name": "removeBank",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "_userName",
+						"type": "string"
+					}
+				],
+				"name": "upvoteCustomer",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "_userName",
+						"type": "string"
+					},
+					{
+						"name": "_newcustomerData",
+						"type": "string"
+					}
+				],
+				"name": "modifyCustomer",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			}
+		],
+		"devdoc": {
+			"methods": {}
+		},
+		"userdoc": {
+			"methods": {}
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts\\kyc.sol": "KYC"
+		},
+		"evmVersion": "petersburg",
+		"libraries": {},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts\\kyc.sol": {
+			"keccak256": "0x1a6e7fb09eef7a4a2c1b9ace27687835f342b0476df064a99261e2a0822b670a",
+			"urls": [
+				"bzzr://0b112ada8d5ae02922ad192a1ad41bdc6fd26d620f12561eef42b90b3a539a27",
+				"dweb:/ipfs/QmdBYHF9uDoieKy51XAVLuDg7RTCQGYWMZzd2BHWaY6jMS"
+			]
+		}
+	},
+	"version": 1
+}
