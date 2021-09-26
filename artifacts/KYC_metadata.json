@@ -26,6 +26,18 @@
 					{
 						"name": "",
 						"type": "address"
+					},
+					{
+						"name": "",
+						"type": "bool"
+					},
+					{
+						"name": "",
+						"type": "uint256"
+					},
+					{
+						"name": "",
+						"type": "uint256"
 					}
 				],
 				"payable": false,
@@ -286,10 +298,10 @@
 	},
 	"sources": {
 		"contracts\\kyc.sol": {
-			"keccak256": "0x91773802bea0b73f58d7e55b06ef9a077e77346bfd1a6d087efabd599f841323",
+			"keccak256": "0xb138a6e3e1f3f3dc5c40d8398640435abfac5a6baa2f77bac8c37bf5a6e3be94",
 			"urls": [
-				"bzzr://5149162247a8734629e9b0392d7207993e294f4e1f08a1a38eb2183b0835d06b",
-				"dweb:/ipfs/QmdYRdwjWN65bMKp1KDJ1KvNfNvZj7rcGmvpegVqhGGFAo"
+				"bzzr://63028a35ba68810043e69df33dd3d2890af468bc75de8ca7be8ef202f23cf1c8",
+				"dweb:/ipfs/QmbGiB5M9R5TMsUVDtaC3p8CcstUqjCWf17MjHMcNgKL8i"
 			]
 		}
 	},

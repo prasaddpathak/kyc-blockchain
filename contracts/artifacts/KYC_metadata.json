@@ -288,6 +288,21 @@
 						"internalType": "address",
 						"name": "",
 						"type": "address"
+					},
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
 					}
 				],
 				"payable": false,
@@ -316,10 +331,10 @@
 	},
 	"sources": {
 		"contracts/kyc.sol": {
-			"keccak256": "0x91773802bea0b73f58d7e55b06ef9a077e77346bfd1a6d087efabd599f841323",
+			"keccak256": "0xf14069cd2ee7f219c68b83cad34798c87356a8edb1b2ab35b3fa1d2d575943b6",
 			"urls": [
-				"bzz-raw://138add19d5f2c4c0ec615ba7b62de7eddfb935467c676b93419b7d8391133789",
-				"dweb:/ipfs/QmdYRdwjWN65bMKp1KDJ1KvNfNvZj7rcGmvpegVqhGGFAo"
+				"bzz-raw://637b25f28a5e91079721df17d0c120390cb9cc48dc5ada0c7b7fb0e3327c64eb",
+				"dweb:/ipfs/QmYPzepph91wfczKYfWqKtQ9LUaFUR4CEQ7rr1s6JDjNCg"
 			]
 		}
 	},
